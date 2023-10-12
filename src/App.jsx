@@ -6,7 +6,8 @@ import Cards from './Cards'
 
 function App() {
 
-  const[dropDowncount,setdropDowncount]=useState(2)
+  const[dropDowncount,setdropDowncount]=useState(1);
+
 
   let data = [
     {
@@ -193,6 +194,10 @@ function App() {
     if(index<dropDowncount){
       return true
     }
+    else if(item<dropDowncount){
+      return true
+
+    }
     
 
   })
@@ -208,6 +213,7 @@ function App() {
     <>
     <div>
       <select name="" id=""onClick={dropdownclick}>
+        <option value="none">None</option>
         <option value="1">1</option>
         <option value="2">2</option>
         <option value="4">4</option>
